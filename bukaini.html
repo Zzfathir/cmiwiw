@@ -1,0 +1,94 @@
+<html><meta charset='UTF-8'/><meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/><meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet"><script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script><link href="https://bukaini.feeldream.repl.co/style.css" rel="stylesheet" type="text/css" /><script src="https://bukaini.feeldream.repl.co/script.js"></script>
+<head>
+<title>Script HTML</title>
+<!-- 
+This code was made by Rayya R
+Blog: https://PalingIT.com
+Instagram: @rayyarrr
+TikTok: @rayy4r
+-->
+</head>
+<!-- Edit Wallpaper 
+di background-image URL --><style>
+:root {
+--warna-bg: rgba(0, 0, 0, 0); 
+--warna-teks: white;
+--warna-bingkai: rgba(255, 255, 255, .5);
+--bingkai: 16px;
+}
+body{background-image: url("https://Bukaini.feeldream.repl.co/wp.jpg");background-repeat: no-repeat;background-size: 110% 110%;animation:none;transition:all .3s ease;}
+@keyframes fanim {0% {background-position: 0% 0%;}25% {background-position: 100% 100%;} 50% {background-position: 0% 100%;} 75% {background-position: 50% 50%;} 100% {background-position: 0% 0%;}}
+</style>
+<body>
+   <div id="bodyblur"></div>
+
+   <div id='Content'><p id="idgeser"></p>
+
+   <div><blockquote id='bq'><img id="foto1" src=""/><img id="foto2" src=""/><img id="foto3" src=""/><img id="foto4" src=""/><p id="katawal"></p><p id="katakata">...</p><p id="katabawah"></p><p id="katakhir"></p><p id="akhiran" onClick="menuju();">[ Jawab ]</p></blockquote></div>
+
+   <div id="contTom" style="display:none;"><a id="By" class='button' onClick="sjawab()"></i>Klik Ini</a></div>
+   </div>
+
+<!-- Jangan Edit Bagian Ini --><script>
+  function showDiv() {setTimeout(setel,1250);setTimeout(otomatis,1500);setTimeout(playkata, 3200);setTimeout(playkata, 4200);setTimeout(kpemb,100);document.getElementById('Content').style = "opacity:1;margin-top:4vh;animation:kont 5s infinite;";bodyblur.style = "-webkit-backdrop-filter:blur(3px); backdrop-filter:blur(3px);";document.querySelector("body").style.animation = "fanim 8s ease infinite";}
+  function loadfoto() {foto1.src = gambar1;foto2.src = gambar2;foto3.src = gambar3;foto4.src = gambar4;}
+  function tombol(){contTom.style="display:flex";} function fakhiran(){document.getElementById("akhiran").style = "display:inline-flex";}
+  function otomatis() {katakata.innerHTML = kata1;befanimkata();setTimeout(animkata,200);} function otomatisa(){katabawah.style="opacity:1;font-weight:700";katabawah.innerHTML = kata2b;}
+  function befanimkata(){katakata.style="transform:scale(.1);";} function animkata() {katakata.style="transform:scale(1);";} function animakhir() {akhiran.style="display:block;";}
+  function kpemb() {document.getElementById("idgeser").style = "display:none";document.getElementById("bq").style = "opacity:1;visibility:visible;margin-top:0";}
+  const swals = Swal.mixin({allowOutsideClick: false, cancelButtonColor: '#FF0040',}); const swalsy = Swal.mixin({confirmButtonText: 'Iya', allowOutsideClick: false,}); const swalst = Swal.mixin({allowOutsideClick: false, showConfirmButton: false, timer: 2500, timerProgressBar: true, didOpen: () => {Swal.showLoading();const b = Swal.getHtmlContainer().querySelector('b');timerInterval = setInterval(() => {Swal.getTimerLeft()}, 100)},willClose: () => {clearInterval(timerInterval)}}); const style = document.createElement('style');
+  var today = new Date();var dd = String(today.getDate()).padStart(2, '0');var mm = String(today.getMonth() + 1).padStart(2, '0');var yyyy = today.getFullYear();const monthNames = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];today = dd + ' ' + monthNames[today.getMonth()] + ' ' + yyyy;
+  function play() {var audio = new Audio('');audio.play();} function sjawab(){contTom.style="display:none";katawal.innerHTML = "";katakhir.innerHTML = "";katakata.innerHTML = "";katabawah.innerHTML = "";jawab();}
+  function fullakhir(){pkata=1;fungsi=3;foto3.style="display:none";foto4.style="display:inline-flex;animation:none";akhiran.innerHTML="Kirim Pesan";katawal.innerHTML = katakhir;katakata.innerHTML = katakhirb;setTimeout(fakhiran,2000);contTom.style="display:none";}
+  function katiga() {foto3.style="display:inline-flex;animation:rt 1s infinite alternate;";}
+  fungsi=1;function setel(){audio.play();} function setel2(){bgm.play();} 
+  function tpkata(){pkata+=1;} pkata=1;function playkata(){if(pkata==1){otomatis();katakata.innerHTML = kata1b;foto1.style="display:none";foto2.style="display:inline-flex;"} if(pkata==2){otomatis();katakata.innerHTML = kata1c;foto2.style="display:none";foto3.style="display:inline-flex;";katiga();setTimeout(tombol,1500);} setTimeout(tpkata, 300);}
+</script> <!-- Sampai Sini -->
+
+<!-- Ganti Kata², Foto, Lagu di bawah ya
+1) Upload foto ke https://postimages.org
+     buat dapetin linknya
+2) Ganti Lagu Upload ke replit.com
+     atau bisa juga ke mailboxdrive.com -->
+
+<script type="text/javascript">
+       async function menuju(){await swals.fire('Kirim pesan ke WhatsApp aku, ya!');window.location = "https://api.whatsapp.com/send?phone=&text=" + pesanwhatsapp;}
+       async function jawab(){
+           var { value: jawaban } = await swals.fire({
+               title: 'Bagi THR-nya &#128073;&#128072;', input: 'text', allowOutsideClick: false, showCancelButton: false,
+           });
+           if(jawaban && jawaban.length < 19){
+           	window.jawaban = jawaban;
+               pesanwhatsapp = jawaban;
+               katakhir = "Jawabanmu: " + jawaban;
+               fullakhir();
+           } else {
+               await swals.fire('Ups!', 'Jawaban tidak boleh kosong atau lebih dari 18 karakter, ya!');
+           }
+       }
+
+      async function apapun() {
+         await swals.fire('Pesan Buat Kamu!', 'Volume-nya besarin ya :)');
+         setTimeout(showDiv,100);
+      } pertama();
+      
+      async function pertama(){
+         audio = new Audio('https://bukaini.feeldream.repl.co/thr.mp3');
+         
+         gambar1 = "https://Bukaini.feeldream.repl.co/1.gif";
+         kata1 = "Minal 'Aidin wal-Faizin &#128591;";
+         gambar2 = "https://Bukaini.feeldream.repl.co/2.gif";
+         kata1b = "Gak Ngasih THR,";
+         gambar3 = "https://Bukaini.feeldream.repl.co/3.gif";
+         kata1c = "Gak Dimaafin &#129315;";
+         
+         gambar4 = "https://antara.feeldream.repl.co/5.gif";
+         katakhirb = "Kirim ke WhatsApp aku ya~";
+
+         loadfoto();
+         await swalst.fire('Tunggu :)');apapun();
+       }
+</script>
+</body>
+</html>
