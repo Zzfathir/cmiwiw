@@ -1,0 +1,735 @@
+<?php
+   include 'kanban_select.php';
+?>
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+   <meta charset="utf-8" />
+   <title>Profile Contact</title>
+   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+   <meta content="" name="description" />
+   <meta content="" name="author" />
+   <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+   <link href="assets/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />
+   <link href="assets/bootstrap/css/bootstrap-fileupload.css" rel="stylesheet" />
+   <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+   <link href="css/style.css" rel="stylesheet" />
+   <link href="css/style-responsive.css" rel="stylesheet" />
+   <link href="css/style-default.css" rel="stylesheet" id="style_color" />
+ 
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<body class="fixed-top">
+   <!-- BEGIN HEADER -->
+   <div id="header" class="navbar navbar-inverse navbar-fixed-top">
+       <!-- BEGIN TOP NAVIGATION BAR -->
+       <div class="navbar-inner">
+           <div class="container-fluid">
+               <!--BEGIN SIDEBAR TOGGLE-->
+               <div class="sidebar-toggle-box hidden-phone">
+                   <div class="icon-reorder tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+               </div>
+               <!--END SIDEBAR TOGGLE-->
+               <!-- BEGIN LOGO -->
+               <a class="brand" href="index.html">
+                   <img src="img/logo.png" alt="Metro Lab" />
+               </a>
+               <!-- END LOGO -->
+               <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+               <a class="btn btn-navbar collapsed" id="main_menu_trigger" data-toggle="collapse" data-target=".nav-collapse">
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                   <span class="arrow"></span>
+               </a>
+               <!-- END RESPONSIVE MENU TOGGLER -->
+               <div id="top_menu" class="nav notify-row">
+                   <!-- BEGIN NOTIFICATION -->
+                   <ul class="nav top-menu">
+                       <!-- BEGIN SETTINGS -->
+                       <li class="dropdown">
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                               <i class="icon-tasks"></i>
+                               <span class="badge badge-important">6</span>
+                           </a>
+                           <ul class="dropdown-menu extended tasks-bar">
+                               <li>
+                                   <p>You have 6 pending tasks</p>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                       <div class="task-info">
+                                         <div class="desc">Dashboard v1.3</div>
+                                         <div class="percent">44%</div>
+                                       </div>
+                                       <div class="progress progress-striped active no-margin-bot">
+                                           <div class="bar" style="width: 44%;"></div>
+                                       </div>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                       <div class="task-info">
+                                           <div class="desc">Database Update</div>
+                                           <div class="percent">65%</div>
+                                       </div>
+                                       <div class="progress progress-striped progress-success active no-margin-bot">
+                                           <div class="bar" style="width: 65%;"></div>
+                                       </div>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                       <div class="task-info">
+                                           <div class="desc">Iphone Development</div>
+                                           <div class="percent">87%</div>
+                                       </div>
+                                       <div class="progress progress-striped progress-info active no-margin-bot">
+                                           <div class="bar" style="width: 87%;"></div>
+                                       </div>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                       <div class="task-info">
+                                           <div class="desc">Mobile App</div>
+                                           <div class="percent">33%</div>
+                                       </div>
+                                       <div class="progress progress-striped progress-warning active no-margin-bot">
+                                           <div class="bar" style="width: 33%;"></div>
+                                       </div>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                       <div class="task-info">
+                                           <div class="desc">Dashboard v1.3</div>
+                                           <div class="percent">90%</div>
+                                       </div>
+                                       <div class="progress progress-striped progress-danger active no-margin-bot">
+                                           <div class="bar" style="width: 90%;"></div>
+                                       </div>
+                                   </a>
+                               </li>
+                               <li class="external">
+                                   <a href="#">See All Tasks</a>
+                               </li>
+                           </ul>
+                       </li>
+                       <!-- END SETTINGS -->
+                       <!-- BEGIN INBOX DROPDOWN -->
+                       <li class="dropdown" id="header_inbox_bar">
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                               <i class="icon-envelope-alt"></i>
+                               <span class="badge badge-important">5</span>
+                           </a>
+                           <ul class="dropdown-menu extended inbox">
+                               <li>
+                                   <p>You have 5 new messages</p>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                       <span class="photo"><img src="./img/avatar-mini.png" alt="avatar" /></span>
+                                    <span class="subject">
+                                    <span class="from">Jonathan Smith</span>
+                                    <span class="time">Just now</span>
+                                    </span>
+                                    <span class="message">
+                                        Hello, this is an example msg.
+                                    </span>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                       <span class="photo"><img src="./img/avatar-mini.png" alt="avatar" /></span>
+                                    <span class="subject">
+                                    <span class="from">Jhon Doe</span>
+                                    <span class="time">10 mins</span>
+                                    </span>
+                                    <span class="message">
+                                     Hi, Jhon Doe Bhai how are you ?
+                                    </span>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                       <span class="photo"><img src="./img/avatar-mini.png" alt="avatar" /></span>
+                                    <span class="subject">
+                                    <span class="from">Jason Stathum</span>
+                                    <span class="time">3 hrs</span>
+                                    </span>
+                                    <span class="message">
+                                        This is awesome dashboard.
+                                    </span>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                       <span class="photo"><img src="./img/avatar-mini.png" alt="avatar" /></span>
+                                    <span class="subject">
+                                    <span class="from">Jondi Rose</span>
+                                    <span class="time">Just now</span>
+                                    </span>
+                                    <span class="message">
+                                        Hello, this is metrolab
+                                    </span>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="#">See all messages</a>
+                               </li>
+                           </ul>
+                       </li>
+                       <!-- END INBOX DROPDOWN -->
+                       <!-- BEGIN NOTIFICATION DROPDOWN -->
+                       <li class="dropdown" id="header_notification_bar">
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+ 
+                               <i class="icon-bell-alt"></i>
+                               <span class="badge badge-warning">7</span>
+                           </a>
+                           <ul class="dropdown-menu extended notification">
+                               <li>
+                                   <p>You have 7 new notifications</p>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                       <span class="label label-important"><i class="icon-bolt"></i></span>
+                                       Server #3 overloaded.
+                                       <span class="small italic">34 mins</span>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                       <span class="label label-warning"><i class="icon-bell"></i></span>
+                                       Server #10 not respoding.
+                                       <span class="small italic">1 Hours</span>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                       <span class="label label-important"><i class="icon-bolt"></i></span>
+                                       Database overloaded 24%.
+                                       <span class="small italic">4 hrs</span>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                       <span class="label label-success"><i class="icon-plus"></i></span>
+                                       New user registered.
+                                       <span class="small italic">Just now</span>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="#">
+                                       <span class="label label-info"><i class="icon-bullhorn"></i></span>
+                                       Application error.
+                                       <span class="small italic">10 mins</span>
+                                   </a>
+                               </li>
+                               <li>
+                                   <a href="#">See all notifications</a>
+                               </li>
+                           </ul>
+                       </li>
+                       <!-- END NOTIFICATION DROPDOWN -->
+ 
+                   </ul>
+               </div>
+               <!-- END  NOTIFICATION -->
+               <div class="top-nav ">
+                   <ul class="nav pull-right top-menu" >
+                       <!-- BEGIN SUPPORT -->
+                       <li class="dropdown mtop5">
+ 
+                           <a class="dropdown-toggle element" data-placement="bottom" data-toggle="tooltip" href="#" data-original-title="Chat">
+                               <i class="icon-comments-alt"></i>
+                           </a>
+                       </li>
+                       <li class="dropdown mtop5">
+                           <a class="dropdown-toggle element" data-placement="bottom" data-toggle="tooltip" href="#" data-original-title="Help">
+                               <i class="icon-headphones"></i>
+                           </a>
+                       </li>
+                       <!-- END SUPPORT -->
+                       <!-- BEGIN USER LOGIN DROPDOWN -->
+                       <li class="dropdown">
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                               <img src="img/avatar1_small.jpg" alt="">
+                               <span class="username">Jhon Doe</span>
+                               <b class="caret"></b>
+                           </a>
+                           <ul class="dropdown-menu extended logout">
+                               <li><a href="#"><i class="icon-user"></i> My Profile</a></li>
+                               <li><a href="#"><i class="icon-cog"></i> My Settings</a></li>
+                               <li><a href="login.html"><i class="icon-key"></i> Log Out</a></li>
+                           </ul>
+                       </li>
+                       <!-- END USER LOGIN DROPDOWN -->
+                   </ul>
+                   <!-- END TOP NAVIGATION MENU -->
+               </div>
+           </div>
+       </div>
+       <!-- END TOP NAVIGATION BAR -->
+   </div>
+   <!-- END HEADER -->
+   <!-- BEGIN CONTAINER -->
+   <div id="container" class="row-fluid">
+      <!-- BEGIN SIDEBAR -->
+      <div class="sidebar-scroll">
+          <div id="sidebar" class="nav-collapse collapse">
+ 
+              <!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
+              <div class="navbar-inverse">
+                  <form class="navbar-search visible-phone">
+                      <input type="text" class="search-query" placeholder="Search" />
+                  </form>
+              </div>
+              <!-- END RESPONSIVE QUICK SEARCH FORM -->
+              <!-- BEGIN SIDEBAR MENU -->
+              <ul class="sidebar-menu">
+                  <li class="sub-menu">
+                      <a class="" href="index.html">
+                          <i class="icon-dashboard"></i>
+                          <span>Dashboard</span>
+                      </a>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" class="">
+                          <i class="icon-book"></i>
+                          <span>Property</span>
+                          <span class="arrow"></span>
+                      </a>
+                      <ul class="sub">
+                          <li><a class="" href="residential.html">Residential</a></li>
+                          <li><a class="" href="commercial.html">Commercial</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" class="">
+                          <i class="icon-cogs"></i>
+                          <span>Tenancy</span>
+                          <span class="arrow"></span>
+                      </a>
+                      <ul class="sub">
+                          <li><a class="" href="pending_tenancy.html">Pending</a></li>
+                          <li><a class="" href="active_tenancy.html">Active</a></li>
+                          <li><a class="" href="moved_in_tenancy.html">Moved In</a></li>
+                          <li><a class="" href="notive_given_tenancy.html">Notice Given</a></li>
+                          <li><a class="" href="completed_tenancy.html">Completed</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" class="">
+                          <i class="icon-tasks"></i>
+                          <span>Diary</span>
+                          <span class="arrow"></span>
+                      </a>
+                      <ul class="sub">
+                          <li><a class="" href="calendar.html">Calendar</a></li>
+                          <li><a class="" href="diary_list.html">List</a></li>
+                          <li><a class="" href="diary_alerts.html">Alerts</a></li>
+                          <li><a class="" href="diary_viewings.html">Viewings</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" class="">
+                          <i class="icon-th"></i>
+                          <span>Jobs</span>
+                          <span class="arrow"></span>
+                      </a>
+                      <ul class="sub">
+                          <li><a class="" href="pending_jobs.html">Pending</a></li>
+                          <li><a class="" href="in_progress_jobs.html">In Progress</a></li>
+                          <li><a class="" href="suspended_jobs.html">Suspended</a></li>
+                          <li><a class="" href="completed_jobs.html">Completed</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu active">
+                      <a href="javascript:;" class="">
+                          <i class="icon-file-alt"></i>
+                          <span>Contacts</span>
+                          <span class="arrow"></span>
+                      </a>
+                      <ul class="sub">
+                          <li><a class="" href="applicant_contacts.html">Applicant</a></li>
+                          <li><a class="" href="tenant_contacts.html">Tenant</a></li>
+                          <li><a class="" href="owner_contacts.html">Owner</a></li>
+                          <li class="active"><a class="" href="supplier_contacts.html">Supplier</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" class="">
+                          <i class="icon-glass"></i>
+                          <span>Accounts</span>
+                          <span class="arrow"></span>
+                      </a>
+                      <ul class="sub">
+                          <li><a class="" href="money_due_in.html">Money Due In</a></li>
+                          <li><a class="" href="money_due_out.html">Money Due Out</a></li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a class="" href="login.html">
+                          <i class="icon-user"></i>
+                          <span>Login Page</span>
+                      </a>
+                  </li>
+              </ul>
+              <!-- END SIDEBAR MENU -->
+          </div>
+      </div>
+      <!-- END SIDEBAR -->
+      <!-- BEGIN PAGE -->
+      <div id="main-content">
+         <!-- BEGIN PAGE CONTAINER-->
+         <div class="container-fluid">
+            <!-- BEGIN PAGE HEADER-->
+            <div class="row-fluid">
+               <div class="span12">
+                   <!-- BEGIN THEME CUSTOMIZER-->
+                   <div id="theme-change" class="hidden-phone">
+                       <i class="icon-cogs"></i>
+                        <span class="settings">
+                            <span class="text">Theme Color:</span>
+                            <span class="colors">
+                                <span class="color-default" data-style="default"></span>
+                                <span class="color-green" data-style="green"></span>
+                                <span class="color-gray" data-style="gray"></span>
+                                <span class="color-purple" data-style="purple"></span>
+                                <span class="color-red" data-style="red"></span>
+                            </span>
+                        </span>
+                   </div>
+                   <!-- END THEME CUSTOMIZER-->
+                  <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+                   <h3 class="page-title">
+                     Profile Contact
+                   </h3>
+                   <ul class="breadcrumb">
+                       <li>
+                           <a href="#">Home</a>
+                           <span class="divider">/</span>
+                       </li>
+                       <li>
+                           <a href="#">Profile</a>
+                           <span class="divider">/</span>
+                       </li>
+                       <li class="active">
+                           Profile Contact
+                       </li>
+                       <li class="pull-right search-wrap">
+                           <form action="search_result.html" class="hidden-phone">
+                               <div class="input-append search-input-area">
+                                   <input class="" id="appendedInputButton" type="text">
+                                   <button class="btn" type="button"><i class="icon-search"></i> </button>
+                               </div>
+                           </form>
+                       </li>
+                   </ul>
+                   <!-- END PAGE TITLE & BREADCRUMB-->
+               </div>
+            </div>
+            <!-- END PAGE HEADER-->
+            <!-- BEGIN PAGE CONTENT-->
+             <div class="row-fluid">
+                 <!-- BEGIN PROFILE PORTLET-->
+                 <div class=" profile span12">
+                    <div class="span2">
+                       <div class="profile-photo">
+                          <img src="img/lock-thumb.jpg" alt="">
+                       </div>
+                        <a href="profile.php" class="profile-features">
+                           <i class=" icon-user"></i>
+                           <p class="info">Profile</p>
+                        </a>
+                        <a href="edit_profile.php" class="profile-features">
+                           <i class="icon-external-link"></i>
+                           <p class="info">Edit Profile</p>
+                        </a>
+                    </div>
+                    <div class="span10">
+                      <div class="metro-nav">
+                          <div class="metro-nav-block nav-block-orange span4">
+                             <a data-original-title="" href="profile_activities.php">
+                                  <i class="icon-book"></i>
+                                  <div class="status">Diary</div>
+                             </a>
+                          </div>
+                          <div class="metro-nav-block nav-olive span4">
+                             <a data-original-title="" href="profile_contact.php">
+                                  <i class="icon-phone"></i>
+                                  <div class="status">Contact</div>
+                             </a>
+                          </div>
+                          <div class="metro-nav-block nav-block-yellow span4">
+                             <a data-original-title="" href="#">
+                                  <i class="icon-comments"></i>
+                                  <div class="status">Notes</div>
+                             </a>
+                          </div>
+                          <div class="metro-nav-block nav-block-yellow span4">
+                             <a data-original-title="" href="calendar.html">
+                                  <i class="icon-calendar"></i>
+                                  <div class="status">Calendar</div>
+                             </a>
+                          </div>
+                          <div class="metro-nav-block nav-block-yellow span4">
+                             <a data-original-title="" href="#">
+                                  <i class="icon-comments-alt"></i>
+                                  <div class="status">?</div>
+                             </a>
+                          </div>
+                      </div>
+                      <p id="demo"></p>
+                           <div class="row-fluid" id="draggable_portlets">
+                              <div class="span3 column sortable" name="0" id="applicant_column" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                 <h4>Applicant</h4>
+                                    <?php
+                                    foreach($data1 as $entry1) {
+                                    ?>
+                                      <div class="widget purple" name="applicant_widget" id="<?php echo id_1; ?>" ondragstart="dragStart(event)">
+                                         <div class="widget-title">
+                                          <h4><?php echo $entry1['contact_type']; ?></h4>
+                                             <span class="tools">
+                                                <a class="icon-save" href="javascript:;" id="save_applicant" onclick="saveFunction()"></a>
+                                                <a class="icon-edit" href="javascript:;" id="edit_applicant" onclick="editFunction()"></a>
+                                                <a class="icon-chevron-down" href="javascript:;"></a>
+                                             </span>
+                                          </div>
+                                          <div class="widget-body">
+                                             <div>
+                                                <input type="hidden" name="refno_con1" id="refno_con1" value="<?php echo $entry1['refno_con']; ?>">
+                                                <label class="control-label">Title and Name: </label>
+                                                <input type="text" name="contact" value="<?php echo $entry1['con_title'] . ' : ' . $entry1['con_fullname']; ?>" readonly>
+                                                <label class="control-label">Address: </label>
+                                                <input type="text" name="address1" id="address1" value="<?php echo $entry1['address1']; ?>" disabled>
+                                                <label class="control-label">Phone: </label>
+                                                <input type="text" name="phone1" id="phone1" value="<?php echo $entry1['phone1']; ?>" disabled>
+                                                <label class="control-label">Mobile: </label>
+                                                <input type="text" name="mobile1" id="mobile1" value="<?php echo $entry1['mobile1']; ?>" disabled>
+                                                <label class="control-label">Profile: </label>
+                                                <input type="text" name="profile1" id="profile1" value="<?php echo $entry1['profile']; ?>" disabled>
+                                             </div>
+                                          </div>
+                                      </div>
+                                 <?php
+                                    }
+                                    //Closes connection
+                                    //$db->close();
+                                 ?>
+                               </div>
+                               <div class="span3 column sortable" name="1" id="supplier_column" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                 <h4>Supplier</h4>
+                                    <?php
+                                    foreach($data2 as $entry2) {
+                                    ?>
+                                      <div class="widget purple" name="supplier_widget" id="<?php echo id_2; ?>" ondragstart="dragStart(event)">
+                                       <div class="widget-title">
+                                          <h4><?php echo $entry2['contact_type']; ?></h4>
+                                               <span class="tools">
+                                                <a class="icon-save" href="javascript:;" id="save_supplier" onclick="save2Function()"></a>
+                                                <a class="icon-edit" href="javascript:;" id="edit_supplier" onclick="edit2Function()"></a>
+                                                <a class="icon-chevron-down" href="javascript:;"></a>
+                                               </span>
+                                       </div>
+                                       <div class="widget-body">
+                                          <div>
+                                             <input type="hidden" name="refno_con2" id="refno_con2" value="<?php echo $entry2['refno_con']; ?>" hidden>
+                                             <label class="control-label">Title and Name: </label>
+                                             <input type="text" name="contact" value="<?php echo $entry2['con_title'] . ' : ' . $entry2['con_fullname']; ?>" readonly>
+                                             <label class="control-label">Address: </label>
+                                             <input type="text" name="address2" id="address2" value="<?php echo $entry2['address1']; ?>" disabled>
+                                             <label class="control-label">Phone: </label>
+                                             <input type="text" name="phone2" id="phone2" value="<?php echo $entry2['phone1']; ?>" disabled>
+                                             <label class="control-label">Mobile: </label>
+                                             <input type="text" name="mobile2" id="mobile2" value="<?php echo $entry2['mobile1']; ?>" disabled>
+                                             <label class="control-label">Profile: </label>
+                                             <input type="text" name="profile2" id="profile2" value="<?php echo $entry2['profile']; ?>" disabled>
+                                          </div>
+                                       </div>
+                                      </div>
+                                 <?php
+                                    }
+                                    //Closes connection
+                                    //$db->close();
+                                 ?>
+                               </div>
+                               <div class="span3 column sortable" name="2" id="owner_column" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                 <h4>Owner</h4>
+                                    <?php
+                                    foreach($data3 as $entry3) {
+                                    ?>
+                                      <div class="widget purple" name="owner_widget" id="<?php echo id_3; ?>" ondragstart="dragStart(event)">
+                                       <div class="widget-title">
+                                          <h4><?php echo $entry3['contact_type']; ?></h4>
+                                               <span class="tools">
+                                                <a class="icon-save" href="javascript:;" id="save_owner" onclick="save3Function()"></a>
+                                                <a class="icon-edit" href="javascript:;" id="edit_owner" onclick="edit3Function()"></a>
+                                                <a class="icon-chevron-down" href="javascript:;"></a>
+                                               </span>
+                                       </div>
+                                       <div class="widget-body">
+                                          <div>
+                                             <input type="hidden" name="refno_con3" id="refno_con3" value="<?php echo $entry3['refno_con']; ?>" hidden>
+                                             <label class="control-label">Title and Name: </label>
+                                             <input type="text" name="contact" value="<?php echo $entry3['con_title'] . ' : ' . $entry3['con_fullname']; ?>" readonly>
+                                             <label class="control-label">Address: </label>
+                                             <input type="text" name="address3" id="address3" value="<?php echo $entry3['address1']; ?>" disabled>
+                                             <label class="control-label">Phone: </label>
+                                             <input type="text" name="phone3" id="phone3" value="<?php echo $entry3['phone1']; ?>" disabled>
+                                             <label class="control-label">Mobile: </label>
+                                             <input type="text" name="mobile3" id="mobile3" value="<?php echo $entry3['mobile1']; ?>" disabled>
+                                             <label class="control-label">Profile: </label>
+                                             <input type="text" name="profile3" id="profile3" value="<?php echo $entry3['profile']; ?>" disabled>
+                                          </div>
+                                       </div>
+                                      </div>
+                                 <?php
+                                    }
+                                    //Closes connection
+                                    //$db->close();
+                                 ?>
+                               </div>
+                               <div class="span3 column sortable" name="3" id="tenant_column" ondrop="drop(event)" ondragover="allowDrop(event)">
+                                 <h4>Tenant</h4>
+                                    <?php
+                                    foreach($data4 as $entry4) {
+                                    ?>
+                                      <div class="widget purple" name="tenant_widget" id="<?php echo id_4; ?>" ondragstart="dragStart(event)">
+                                       <div class="widget-title">
+                                          <h4><?php echo $entry4['contact_type']; ?></h4>
+                                               <span class="tools">
+                                                <a class="icon-save" href="javascript:;" id="save_tenant" onclick="save4Function()"></a>
+                                                <a class="icon-edit" href="javascript:;" id="edit_tenant" onclick="edit4Function()"></a>
+                                                <a class="icon-chevron-down" href="javascript:;"></a>
+                                               </span>
+                                       </div>
+                                       <div class="widget-body">
+                                          <div>
+                                             <input type="hidden" name="refno_con4" id="refno_con4" value="<?php echo $entry4['refno_con']; ?>" hidden>
+                                             <label class="control-label">Title and Name: </label>
+                                             <input type="text" name="contact" value="<?php echo $entry4['con_title'] . ' : ' . $entry4['con_fullname']; ?>" readonly>
+                                             <label class="control-label">Address: </label>
+                                             <input type="text" name="address4" id="address4" value="<?php echo $entry4['address1']; ?>" disabled>
+                                             <label class="control-label">Phone: </label>
+                                             <input type="text" name="phone4" id="phone4" value="<?php echo $entry4['phone1']; ?>" disabled>
+                                             <label class="control-label">Mobile: </label>
+                                             <input type="text" name="mobile4" id="mobile4" value="<?php echo $entry4['mobile1']; ?>" disabled>
+                                             <label class="control-label">Profile: </label>
+                                             <input type="text" name="profile4" id="profile4" value="<?php echo $entry4['profile']; ?>" disabled>
+                                          </div>
+                                       </div>
+                                      </div>
+                                 <?php
+                                    }
+                                    //Closes connection
+                                    $db->close();
+                                 ?>
+                               </div>
+                           </div>
+                         </div>
+                     </div>
+                 </div>
+                 <!-- END PROFILE PORTLET-->
+             </div>
+            <!-- END PAGE CONTENT-->
+         </div>
+         <!-- END PAGE CONTAINER-->
+      </div>
+      <!-- END PAGE -->
+   </div>
+   <!-- END CONTAINER -->
+   <!-- BEGIN FOOTER -->
+   <div id="footer">
+       2013 &copy; Metro Lab Dashboard.
+   </div>
+   <!-- END FOOTER -->
+ 
+   <!-- BEGIN JAVASCRIPTS -->
+   <!-- Load javascripts at bottom, this will reduce page load time -->
+   <script src="js/jquery-1.8.3.min.js"></script>
+   <script src="assets/jquery-ui/jquery-ui-1.10.1.custom.min.js" type="text/javascript"></script>
+   <script src="js/jquery.nicescroll.js" type="text/javascript"></script>
+   <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+   <script src="js/draggable-portlet.js"></script>
+   <script src="js/jquery.scrollTo.min.js"></script>
+ 
+   <!-- ie8 fixes -->
+   <!--[if lt IE 9]>
+   <script src="js/excanvas.js"></script>
+   <script src="js/respond.js"></script>
+   <![endif]-->
+ 
+   <!--common script for all pages-->
+   <script src="js/common-scripts.js"></script>
+ 
+   <!-- END JAVASCRIPTS -->
+   <script>
+       jQuery(document).ready(function() {
+           DraggablePortlet.init();
+       });
+ 
+       //when edit button clicked, lets user edit the text fields
+        function editFunction() {
+           document.getElementById("address1").disabled = false;
+           document.getElementById("phone1").disabled = false;
+           document.getElementById("mobile1").disabled = false;
+           document.getElementById("profile1").disabled = false;
+        }
+        function edit2Function() {
+           document.getElementById("address2").disabled = false;
+           document.getElementById("phone2").disabled = false;
+           document.getElementById("mobile2").disabled = false;
+           document.getElementById("profile2").disabled = false;
+        }
+        function edit3Function() {
+           document.getElementById("address3").disabled = false;
+           document.getElementById("phone3").disabled = false;
+           document.getElementById("mobile3").disabled = false;
+           document.getElementById("profile3").disabled = false;
+        }
+        function edit4Function() {
+           document.getElementById("address4").disabled = false;
+           document.getElementById("phone4").disabled = false;
+           document.getElementById("mobile4").disabled = false;
+           document.getElementById("profile4").disabled = false;
+        }
+        //when save button clicked, returns text fields back to readonly state and runs update_contact.php
+        function saveFunction() {
+           document.getElementById("address1").disabled = true;
+           document.getElementById("phone1").disabled = true;
+           document.getElementById("mobile1").disabled = true;
+           document.getElementById("profile1").disabled = true;
+           $.get("update_contact.php");
+        }
+        function save2Function() {
+           document.getElementById("address2").disabled = true;
+           document.getElementById("phone2").disabled = true;
+           document.getElementById("mobile2").disabled = true;
+           document.getElementById("profile2").disabled = true;
+           $.get("update_contact.php");
+         }
+         function save3Function() {
+           document.getElementById("address3").disabled = true;
+           document.getElementById("phone3").disabled = true;
+           document.getElementById("mobile3").disabled = true;
+           document.getElementById("profile3").disabled = true;
+           $.get("update_contact.php");
+         }
+         function save4Function() {
+           document.getElementById("address4").disabled = true;
+           document.getElementById("phone4").disabled = true;
+           document.getElementById("mobile4").disabled = true;
+           document.getElementById("profile4").disabled = true;
+           $.get("update_contact.php");
+         }
+   </script>
+</body>
+<!-- END BODY -->
+</html>
