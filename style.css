@@ -1,0 +1,40 @@
+* {
+    margin: 0%;
+}
+
+nav {
+    background-color: #71B280;
+    width: 100%;
+    display: block;
+}
+
+
+
+nav ul li {
+    display: inline-block;
+    background-color: #71B280;
+    padding: 30px;
+
+}
+
+nav ul {
+    list-style: none;
+}
+
+li {
+    display: list-item;
+
+}
+
+nav ul li a {
+    color: #134E5E;
+    text-decoration: none;
+}
+
+nav ul li :hover {
+    color: antiquewhite;
+}
+
+nav ul :hover {
+    color: #B5AC49;
+}
